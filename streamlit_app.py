@@ -36,6 +36,11 @@ if time_to_insert:
     
     st.success('Your Smoothie is ordered!', icon="✅")
 
+df = cnx.query("SELECT * FROM smoothies.public.orders")
+for row in df.itertuples():
+ st.write(f"Order ID: {row.ORDER_ID}, Name on Order: {row.NAME_ON_ORDER}, Ingredients: {row.INGREDIENTS}")
+   
+
     
    
 
