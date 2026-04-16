@@ -1,5 +1,6 @@
 # Import python packages
 import streamlit as st
+st.write(st.secrets)
 from snowflake.snowpark.functions import col
 import requests 
 
